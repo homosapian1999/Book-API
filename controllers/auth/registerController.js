@@ -25,6 +25,7 @@ const registerController = async (req, res) => {
       name,
       email,
       password: updatedPassword,
+      books: [],
     });
 
     return res.status(201).send({
