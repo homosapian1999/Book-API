@@ -17,6 +17,10 @@ app.use(express.json());
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/book", bookRoute);
 
+app.get("/", (req, res) => {
+  res.status(200).send("Hello");
+});
+
 app.listen(process.env.PORT, (err) => {
   if (err) return console.log("Error while suggesring the server");
   console.log("Server is up and running");
