@@ -11,7 +11,8 @@ const getAllBooksController = async (req, res) => {
   } catch (err) {
     return res.status(500).send({
       success: false,
-      message: "Error in getAll Books controller",
+      message: "Books not Found, error in get all books controller",
+      err,
     });
   }
 };

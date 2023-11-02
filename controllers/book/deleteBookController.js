@@ -19,7 +19,8 @@ const deleteBookController = async (req, res) => {
   } catch (err) {
     return res.status(500).send({
       success: false,
-      message: "Error in delete Book controller",
+      message: "Book not Found, error in delete controller",
+      err,
     });
   }
 };

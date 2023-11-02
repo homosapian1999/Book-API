@@ -25,7 +25,9 @@ const updateBookController = async (req, res) => {
   } catch (err) {
     return res.status(500).send({
       success: false,
-      message: "Error in update Book controller",
+      message:
+        "Book not Found, error in delete controller, Error in update Book controller",
+      err,
     });
   }
 };
