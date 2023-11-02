@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.post("/addbook", authMiddleware, addBookController);
 router.get("/getall", authMiddleware, getAllBooksController);
-router.get("/book/:id", authMiddleware, getBookController);
+router.get("/singlebook/:id", authMiddleware, getBookController);
 router.put("/update/:id", authMiddleware, updateBookController);
 router.delete("/delete/:id", authMiddleware, deleteBookController);
 
